@@ -7,21 +7,7 @@ RATIONALIST_PKGS = "\
  iproute2\
  iproute2-tc\
  iptables\
- kernel-base\
- kernel-module-binfmt-misc\
- kernel-module-iptable-filter\
- kernel-module-iptable-nat\
- kernel-module-ip-tables\
- kernel-module-ipt-masquerade\
- kernel-module-nf-conntrack\
- kernel-module-nf-conntrack-ipv4\
- kernel-module-nf-defrag-ipv4\
- kernel-module-nf-nat\
- kernel-module-nf-nat-ipv4\
- kernel-module-ppp-generic\
- kernel-module-pppoe\
- kernel-module-pppox\
- kernel-module-x-tables\
+ kernel-modules\
  kmod\
  libacl\
  libattr\
