@@ -8,6 +8,8 @@ RATIONALIST_PKGS = "\
  iproute2-bridge\
  iproute2-tc\
  iptables\
+ jittertrap\
+ jittertrap-dbg\
  kernel-modules\
  kmod\
  libacl\
