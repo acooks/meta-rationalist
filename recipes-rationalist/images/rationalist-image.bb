@@ -5,6 +5,7 @@ RATIONALIST_PKGS = "\
  expat\
  initscripts\
  iproute2\
+ iproute2-bridge\
  iproute2-tc\
  iptables\
  kernel-modules\
@@ -38,6 +39,7 @@ RATIONALIST_PKGS = "\
  systemd-binfmt\
  systemd-compat-units\
  systemd-serialgetty\
+ tcpdump\
  update-alternatives-opkg\
  update-rc.d\
  util-linux-agetty\
