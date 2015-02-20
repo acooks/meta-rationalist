@@ -1,31 +1,4 @@
-# linux-yocto-custom.bb:
-#
-#   An example kernel recipe that uses the linux-yocto and oe-core
-#   kernel classes to apply a subset of yocto kernel management to git
-#   managed kernel repositories.
-#
-#   To use linux-yocto-custom in your layer, create a
-#   linux-yocto-custom.bbappend file containing at least the following
-#   lines:
-#
-#     FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-#     COMPATIBLE_MACHINE_yourmachine = "yourmachine"
-#
-#   You must also provide a Linux kernel configuration. The most direct
-#   method is to copy your .config to files/defconfig in your layer,
-#   in the same directory as the bbappend and add file://defconfig to
-#   your SRC_URI.
-#
-#   To use the yocto kernel tooling to generate a BSP configuration
-#   using modular configuration fragments, see the yocto-bsp and
-#   yocto-kernel tools documentation.
-#
-# Warning:
-#
-#   Building this example without providing a defconfig or BSP
-#   configuration will result in build or boot errors. This is not a
-#   bug.
-#
+# Based on linux-yocto-custom.bb:
 #
 # Notes:
 #
@@ -65,7 +38,7 @@ SRC_URI += "file://defconfig"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 LINUX_VERSION = "3.18"
-LINUX_VERSION_EXTENSION ?= "-rationalist"
+LINUX_VERSION_EXTENSION = "-rationalist"
 
 # Override SRCREV to point to a different commit in a bbappend file to
 # build a different release of the Linux kernel.
