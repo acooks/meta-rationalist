@@ -1,5 +1,7 @@
 [Match]
-Name=enp1s0
+Name=mgmt
 
 [Network]
-Address=192.168.0.1/24
+DHCP=yes
+LinkLocalAddressing=true
+LLMNR=true

@@ -1,5 +1,5 @@
 [Match]
-Name=enp2s0
+Name=Port2
 
 [Network]
 Bridge=br0
