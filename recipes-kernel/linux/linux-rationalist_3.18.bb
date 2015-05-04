@@ -43,7 +43,7 @@ LINUX_VERSION_EXTENSION = "-rationalist"
 # Override SRCREV to point to a different commit in a bbappend file to
 # build a different release of the Linux kernel.
 # tag: v3.4 76e10d158efb6d4516018846f60c2ab5501900bc
-SRCREV = "a17f9bf1f7cd3412b9920577a7c0ec34cb81b233"
+SRCREV = "96e199f1751e707a7a8c04d9b079f84df2e0d4ff"
 
 PR = "r2"
 PV = "${LINUX_VERSION}+git${SRCPV}"
