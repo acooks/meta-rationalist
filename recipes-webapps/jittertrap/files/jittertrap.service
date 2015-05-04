@@ -1,0 +1,12 @@
+[Unit]
+Description=JitterTrap: you're trapped.
+After=network.target
+
+[Service]
+Type=simple
+Environment=LANG=C
+ExecStart=@BINDIR@/jittertrap
+ExecStop=@BASE_BINDIR@/kill -WINCH ${MAINPID}
+
+[Install]
+WantedBy=multi-user.target

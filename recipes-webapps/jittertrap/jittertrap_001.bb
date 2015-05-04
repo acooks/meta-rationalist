@@ -5,9 +5,21 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8264535c0c4e9c6c335635c4026a8022"
 SRCREV = "${AUTOREV}"
 PR = "r0"
 PV = "001+git${SRCPV}"
-SRC_URI = "git:///mnt/devel/git-repos/jittertrap.git"
+
+#SRC_URI = "git:///mnt/devel/git-repos/jittertrap.git \
+#           file://jittertrap.service"
+
+BRANCH = "master"
+SRC_URI = "git:///mnt/devel/git-repos/jittertrap.git;branch=${BRANCH} \
+           file://jittertrap.service"
+
 
 S = "${WORKDIR}/git"
+
+inherit pkgconfig systemd
+
+SYSTEMD_SERVICE_${PN} = "jittertrap.service"
+SYSTEMD_AUTO_ENABLE_${PN} = "enable"
 
 DEPENDS += "libnl"
 
@@ -32,4 +44,8 @@ do_install() {
    install -m 0644 ${S}/static_content/jittertrap.js ${D}/var/lib/jittertrap/
    install -m 0644 ${S}/static_content/jquery-2.1.3.min.js ${D}/var/lib/jittertrap/
    install -m 0644 ${S}/static_content/jquery.canvasjs.min.js ${D}/var/lib/jittertrap/
+
+   install -d ${D}${systemd_unitdir}/system
+   install -m 0644 ${WORKDIR}/jittertrap.service ${D}${systemd_unitdir}/system
+   sed -i -e 's,@BINDIR@,${bindir},g' ${D}${systemd_unitdir}/system/jittertrap.service
 }
