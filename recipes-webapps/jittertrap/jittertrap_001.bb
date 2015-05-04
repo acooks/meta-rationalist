@@ -24,7 +24,7 @@ SYSTEMD_AUTO_ENABLE_${PN} = "enable"
 DEPENDS += "libnl"
 
 do_compile() {
-   make
+   ALLOWED_IFACES="Port1:Port2" make
 }
 
 do_install() {
