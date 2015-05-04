@@ -47,6 +47,8 @@ RATIONALIST_PKGS = "\
  zlib\
 "
 
+DEPENDS = "parted-native"
+
 CONFIG_PKGS = "mousetrap"
 #CONFIG_PKGS = ""
 
