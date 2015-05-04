@@ -3,7 +3,7 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8264535c0c4e9c6c335635c4026a8022"
 
 SRCREV = "${AUTOREV}"
-PR = "r0"
+PR = "r1"
 PV = "001+git${SRCPV}"
 
 #SRC_URI = "git:///mnt/devel/git-repos/jittertrap.git \
