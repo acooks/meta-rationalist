@@ -13,6 +13,7 @@ RATIONALIST_PKGS = "\
  jittertrap-dbg\
  kernel-modules\
  kmod\
+ less\
  libacl\
  libattr\
  libcap\
