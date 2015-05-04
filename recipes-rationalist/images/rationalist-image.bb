@@ -24,18 +24,10 @@ RATIONALIST_PKGS = "\
  libkmod\
  liblzma\
  libwrap\
- libx11\
- libxau\
- libxcb\
- libxdmcp\
  netbase\
  openssh\
  packagegroup-core-boot\
  pciutils\
- ppp\
- ppp-oa\
- ppp-oe\
- ppp-tools\
  run-postinsts\
  shadow\
  shadow-securetty\
