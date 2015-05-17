@@ -29,24 +29,18 @@ do_compile() {
 
 do_install() {
    install -d ${D}/usr/bin/
-   install -m 0744 ${S}/src/jittertrap ${D}/usr/bin/
+   install -m 0744 ${S}/backend/jittertrap ${D}/usr/bin/
 
    install -d ${D}/var/lib/jittertrap/
    install -d ${D}/var/lib/jittertrap/fonts
    install -d ${D}/var/lib/jittertrap/css
    install -d ${D}/var/lib/jittertrap/js
    install -d ${D}/var/lib/jittertrap/templates
-   install -m 0644 ${S}/static_content/fonts/* ${D}/var/lib/jittertrap/fonts/
-   install -m 0644 ${S}/static_content/css/* ${D}/var/lib/jittertrap/css/
-   install -m 0644 ${S}/static_content/js/* ${D}/var/lib/jittertrap/js/
-   install -m 0644 ${S}/static_content/templates/* ${D}/var/lib/jittertrap/templates/
-
-   install -m 0644 ${S}/static_content/bootstrap.min.css ${D}/var/lib/jittertrap/
-   install -m 0644 ${S}/static_content/index.html ${D}/var/lib/jittertrap/
-   install -m 0644 ${S}/static_content/cbuffer.js ${D}/var/lib/jittertrap/
-   install -m 0644 ${S}/static_content/jittertrap-concat.js ${D}/var/lib/jittertrap/
-   install -m 0644 ${S}/static_content/jquery-2.1.3.min.js ${D}/var/lib/jittertrap/
-   install -m 0644 ${S}/static_content/jquery.canvasjs.min.js ${D}/var/lib/jittertrap/
+   install -m 0644 ${S}/frontend/output/fonts/* ${D}/var/lib/jittertrap/fonts/
+   install -m 0644 ${S}/frontend/output/css/* ${D}/var/lib/jittertrap/css/
+   install -m 0644 ${S}/frontend/output/js/* ${D}/var/lib/jittertrap/js/
+   install -m 0644 ${S}/frontend/output/templates/* ${D}/var/lib/jittertrap/templates/
+   install -m 0644 ${S}/frontend/output/index.html ${D}/var/lib/jittertrap/
 
    install -d ${D}${systemd_unitdir}/system
    install -m 0644 ${WORKDIR}/jittertrap.service ${D}${systemd_unitdir}/system
