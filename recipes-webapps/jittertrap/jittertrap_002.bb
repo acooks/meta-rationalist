@@ -23,7 +23,7 @@ inherit pkgconfig systemd
 SYSTEMD_SERVICE_${PN} = "jittertrap.service"
 SYSTEMD_AUTO_ENABLE_${PN} = "enable"
 
-DEPENDS += "libnl jansson"
+DEPENDS += "libnl jansson libwebsockets"
 
 # The default yocto git checkout results in a detached HEAD state.
 # Detached HEAD sucks, because it breaks the traceability of
