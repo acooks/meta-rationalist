@@ -14,7 +14,7 @@ PV = "001+git${SRCPV}"
 #BRANCH = "master"
 #SRC_URI = "git://git.infradead.org/users/tgr/libnl.git;branch=${BRANCH};tag=${TAG}"
 
-#BRANCH = "master"
+BRANCH = "master"
 TAG = "libnl3_2_25"
 SRC_URI = "git://git.infradead.org/users/tgr/libnl.git;branch=${BRANCH};tag=${TAG}"
 
