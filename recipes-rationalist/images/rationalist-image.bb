@@ -2,7 +2,6 @@ SUMMARY = "A small image just capable of allowing a device to boot."
 
 RATIONALIST_PKGS = "\
  avahi-daemon\
- ethtool\
  expat\
  initscripts\
  iproute2\
@@ -13,43 +12,28 @@ RATIONALIST_PKGS = "\
  jittertrap-dbg\
  kernel-modules\
  kmod\
- less\
- libacl\
- libattr\
- libcap\
- libcomerr\
- libe2p\
- libext2fs\
- libgcc\
- libkmod\
- liblzma\
- libwrap\
  netbase\
  openssh\
  packagegroup-core-boot\
- pciutils\
  run-postinsts\
  shadow\
  shadow-securetty\
  systemd\
- systemd-binfmt\
  systemd-compat-units\
  systemd-serialgetty\
  tcpdump\
  update-alternatives-opkg\
  update-rc.d\
  util-linux-agetty\
- util-linux-fsck\
  util-linux-libblkid\
  util-linux-libmount\
  util-linux-libuuid\
  util-linux-mount\
- zlib\
 "
 
 DEPENDS = "parted-native"
 
-DEVEL_PKGS = "gdb valgrind"
+DEVEL_PKGS = "ethtool gdb latencytop valgrind"
 
 CONFIG_PKGS = "mousetrap"
 
