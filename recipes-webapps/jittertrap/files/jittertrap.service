@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 Environment=LANG=C
-ExecStart=@BINDIR@/jt-server
+ExecStart=@BINDIR@/jt-server --resource_path /var/lib/jittertrap/
 ExecStop=@BASE_BINDIR@/kill -WINCH ${MAINPID}
 
 [Install]
