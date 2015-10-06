@@ -36,6 +36,7 @@ inherit pkgconfig cmake
 PACKAGES = "${PN}-dbg ${PN}-doc ${PN}-locale"
 PACKAGES += " libwebsockets "
 PACKAGES += " libwebsockets-dev "
+PACKAGES += " libwebsockets-staticdev "
 
 libwebsockets_files = ""
 libwebsockets_files += "${prefix}/bin/libwebsockets*"
@@ -49,6 +50,13 @@ libwebsockets-dev_files += "${prefix}/include/libwebsockets.h"
 libwebsockets-dev_files += "${prefix}/lib/libwebsockets.so"
 libwebsockets-dev_files += "${prefix}/lib/pkgconfig/*"
 MANIFESTFILES_${PN}-dev = "libwebsockets.manifest"
+
+libwebsockets-staticdev_files = ""
+libwebsockets-statocdev_files += "${prefix}/include/lws_config.h"
+libwebsockets-staticdev_files += "${prefix}/include/libwebsockets.h"
+libwebsockets-staticdev_files += "${prefix}/lib/libwebsockets.a"
+libwebsockets-staticdev_files += "${prefix}/lib/pkgconfig/*"
+MANIFESTFILES_${PN}-staticdev = "libwebsockets.manifest"
 
 FILES_${PN} = "${libwebsockets_files}"
 FILES_${PN}-dev = "${libwebsockets-dev_files}"
