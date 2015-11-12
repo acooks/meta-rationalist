@@ -38,7 +38,7 @@ SRC_URI += "file://defconfig"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 #LINUX_VERSION = "3.19"
-LINUX_VERSION = "4.2.3"
+LINUX_VERSION = "4.2.5"
 LINUX_VERSION_EXTENSION = "-rationalist"
 
 # Override SRCREV to point to a different commit in a bbappend file to
