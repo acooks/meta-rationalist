@@ -1,15 +1,12 @@
 require libwebsockets.inc
 
-PV = "1.4"
+PV = "1.5"
 
 PRIORITY = "10"
 
 LIC_FILES_CHKSUM ??= "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
-#SRC_URI += "git://review.tizen.org/profile/ivi/libwebsockets;tag=5c054a5a61ec540e5bd5e2aa55742a3ed070b540;nobranch=1"
-
-SRCREV = "3ae1badae7a05e0982e0dfbcb078da3d4b92a81d"
-SRC_URI += "git://github.com/acooks/libwebsockets"
-
+SRCREV = "9ffb42efec855b36a67a186fab6650e5df7f3f94"
+SRC_URI += "git://github.com/warmcat/libwebsockets"
 
 BBCLASSEXTEND += " native "
