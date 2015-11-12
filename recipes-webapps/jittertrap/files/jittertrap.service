@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=simple
 Environment=LANG=C
-ExecStart=@BINDIR@/jt-server --resource_path /var/lib/jittertrap/
-ExecStop=@BASE_BINDIR@/kill -WINCH ${MAINPID}
+ExecStart=@BINDIR@/jt-server --port 80 --resource_path /var/lib/jittertrap/
+ExecStop=kill -WINCH ${MAINPID}
 
 [Install]
 WantedBy=multi-user.target
