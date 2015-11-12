@@ -14,8 +14,6 @@ RATIONALIST_PKGS = "\
  kmod\
  netbase\
  openssh\
- packagegroup-core-boot\
- run-postinsts\
  shadow\
  shadow-securetty\
  systemd\
@@ -37,13 +35,23 @@ DEVEL_PKGS = "ethtool gdb latencytop valgrind"
 
 CONFIG_PKGS = "mousetrap"
 
-IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL} ${RATIONALIST_PKGS} ${CONFIG_PKGS} ${DEVEL_PKGS}"
+# read-only-rootfs breaks ssh config, specifically ssh_allow_empty_password
+#IMAGE_FEATURES += "package-management ssh-server-openssh read-only-rootfs"
+IMAGE_FEATURES += "package-management ssh-server-openssh"
+
+IMAGE_INSTALL = "\
+ packagegroup-core-boot\
+ ${ROOTFS_PKGMANAGE_BOOTSTRAP}\
+ ${CORE_IMAGE_EXTRA_INSTALL}\
+ ${RATIONALIST_PKGS}\
+ ${CONFIG_PKGS}\
+ ${DEVEL_PKGS}\
+ run-postinsts\
+"
 
 IMAGE_LINGUAS = " "
 
 LICENSE = "MIT"
-
-IMAGE_FEATURES += "package-management"
 
 inherit core-image
 
@@ -74,4 +82,10 @@ add_custom_smart_config() {
 
 
 
-ROOTFS_POSTPROCESS_COMMAND =+ "set_root_password ; add_custom_smart_config ;"
+ROOTFS_POSTPROCESS_COMMAND =+ "\
+ set_root_password ;\
+ add_custom_smart_config ;\
+ ssh_allow_empty_password ;\
+ rootfs_update_timestamp ;\
+ ssh_disable_dns_lookup ;\
+"
