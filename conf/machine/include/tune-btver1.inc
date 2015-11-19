@@ -12,7 +12,7 @@ require conf/machine/include/tune-core2.inc
 
 # Extra tune features
 TUNEVALID[btver1] = "Enable AMD Bobcat specific processor optimizations"
-TUNE_CCARGS .= "${@bb.utils.contains("TUNE_FEATURES", "btver1", " -march=btver1 -mtune=btver1 -mfpmath=sse ", "", d)}"
+TUNE_CCARGS .= "${@bb.utils.contains("TUNE_FEATURES", "btver1", " -march=btver1 -mtune=btver1 -mfpmath=sse -msse4a -msse -msse2", "", d)}"
 
 # Extra tune selections
 AVAILTUNES += "btver1-32"
