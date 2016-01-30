@@ -42,6 +42,11 @@ libwebsockets_files = ""
 libwebsockets_files += "${prefix}/bin/libwebsockets*"
 libwebsockets_files += "${prefix}/lib/libwebsockets*.so.*"
 libwebsockets_files += "${prefix}/share/libwebsockets-test-server/*"
+libwebsockets_files += "${prefix}/lib/cmake"
+libwebsockets_files += "${prefix}/lib/cmake/libwebsockets"
+libwebsockets_files += "${prefix}/lib/cmake/libwebsockets/LibwebsocketsConfig.cmake"
+libwebsockets_files += "${prefix}/lib/cmake/libwebsockets/LibwebsocketsConfigVersion.cmake"
+
 MANIFESTFILES_${PN} = "libwebsockets.manifest"
 
 libwebsockets-dev_files = ""
