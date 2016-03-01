@@ -8,14 +8,14 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=4fbd65380cdd255951079008b364516c"
 DEPENDS = "flex-native bison-native"
 
 #SRCREV = "${AUTOREV}"
-PR = "r0"
-PV = "001+git${SRCPV}"
+PR = "r1"
+PV = "001-${PR}+git${SRCPV}"
 
 #BRANCH = "master"
 #SRC_URI = "git://git.infradead.org/users/tgr/libnl.git;branch=${BRANCH};tag=${TAG}"
 
 BRANCH = "master"
-TAG = "libnl3_2_25"
+TAG = "libnl3_2_27"
 SRC_URI = "git://git.infradead.org/users/tgr/libnl.git;branch=${BRANCH};tag=${TAG}"
 
 #BRANCH = "3_2_25"
@@ -35,13 +35,25 @@ FILES_${PN}-dev += "${libdir}/libnl/cli/*/*.so \
                     ${libdir}/libnl/cli/*/*.la"
 FILES_${PN}-staticdev += "${libdir}/libnl/cli/*/*.a"
 
-PACKAGES += "${PN}-cli ${PN}-route ${PN}-nf ${PN}-genl ${PN}-idiag"
+PACKAGES += "${PN}-cli ${PN}-route ${PN}-nf ${PN}-xfrm ${PN}-genl ${PN}-idiag"
 FILES_${PN}-cli   = "${libdir}/libnl-cli-3.so.* \
                      ${libdir}/libnl/cli/*/*.so.* \
-                     ${sbindir}/nl-*"
+                     ${bindir}/nl-* \
+                     ${bindir}/idiag-socket-details \
+                     ${bindir}/nf-exp-list \
+                     ${bindir}/nf-monitor \
+                     ${bindir}/nf-ct-list \
+                     ${bindir}/nf-exp-add \
+                     ${bindir}/genl-ctrl-list \
+                     ${bindir}/nf-exp-delete \
+                     ${bindir}/nf-ct-add \
+                     ${bindir}/nf-queue \
+                     ${bindir}/nf-log"
+
 FILES_${PN}-route = "${libdir}/libnl-route-3.so.*"
 FILES_${PN}-idiag = "${libdir}/libnl-idiag-3.so.*"
 FILES_${PN}-nf    = "${libdir}/libnl-nf-3.so.*"
+FILES_${PN}-xfrm  = "${libdir}/libnl-xfrm-3.so.*"
 FILES_${PN}-genl  = "${libdir}/libnl-genl-3.so.* \
                      ${libdir}/libnl-genl.so.* \
                      ${sbindir}/genl-ctrl-list"
