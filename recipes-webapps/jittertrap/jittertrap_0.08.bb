@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8264535c0c4e9c6c335635c4026a8022"
 
 SRCREV = "${AUTOREV}"
 PR = "r1"
-PV = "0.07+git${SRCPV}"
+PV = "0.08-${PR}+git${SRCPV}"
 
 SRC_URI += "git://github.com/acooks/jittertrap \
            file://jittertrap.service"
@@ -29,10 +29,10 @@ addtask do_checkout before do_compile after do_unpack
 
 
 do_compile() {
+   make \
    ALLOWED_IFACES="Port1:Port2" \
    SAMPLE_PERIOD_US=1000 \
-   CFLAGS_EXTRA="-march=btver1"
-   make
+   CFLAGS_EXTRA="${CFLAGS}"
 }
 
 do_install() {
