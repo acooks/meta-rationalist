@@ -29,7 +29,7 @@ RATIONALIST_PKGS = "\
  util-linux-mount\
 "
 
-DEPENDS = "parted-native"
+DEPENDS = "parted-native python-smartpm"
 
 DEVEL_PKGS = "ethtool gdb latencytop valgrind"
 
