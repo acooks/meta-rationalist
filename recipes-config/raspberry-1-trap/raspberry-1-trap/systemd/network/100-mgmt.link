@@ -1,0 +1,6 @@
+[Match]
+Path=*platform-bcm2708_usb-usb-0:1.1:1.0*
+
+[Link]
+Name=mgmt
+MACAddressPolicy=persistent

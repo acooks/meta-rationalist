@@ -1,8 +1,10 @@
-SUMMARY = "Config for Rationali.st JitterTrap."
+SUMMARY = "Config for Rationali.st JitterTrap on RPi."
 SECTION = "base"
-LICENSE = "CLOSED"
+LICENSE = "GPLv2"
 RDEPENDS_${PN} = "initscripts"
 PR = "r0"
+COMPATIBLE_MACHINE = "raspberrypi"
+RPROVIDES_${PN} = "trap-machine-config"
 
 SRC_URI = "file://systemd/network/br0.netdev \
            file://systemd/network/100-mgmt.link \

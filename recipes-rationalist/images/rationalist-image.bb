@@ -33,7 +33,7 @@ DEPENDS = "parted-native"
 
 DEVEL_PKGS = "ethtool gdb latencytop valgrind"
 
-CONFIG_PKGS = "mousetrap"
+CONFIG_PKGS = "trap-machine-config"
 
 # read-only-rootfs breaks ssh config, specifically ssh_allow_empty_password
 #IMAGE_FEATURES += "package-management ssh-server-openssh read-only-rootfs"
