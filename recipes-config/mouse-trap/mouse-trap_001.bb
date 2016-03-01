@@ -6,6 +6,8 @@ PR = "r0"
 COMPATIBLE_MACHINE = "mousetrap_hw"
 RPROVIDES_${PN} = "trap-machine-config"
 
+RRECOMMENDS_${PN}-dev += "valgrind gdb latencytop ethtool"
+
 SRC_URI = "file://systemd/network/br0.netdev \
            file://systemd/network/100-mgmt.link \
            file://systemd/network/101-port1.link \

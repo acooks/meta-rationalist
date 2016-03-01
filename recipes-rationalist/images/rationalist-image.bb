@@ -31,8 +31,6 @@ RATIONALIST_PKGS = "\
 
 DEPENDS = "parted-native python-smartpm"
 
-DEVEL_PKGS = "ethtool gdb latencytop valgrind"
-
 CONFIG_PKGS = "trap-machine-config"
 
 # read-only-rootfs breaks ssh config, specifically ssh_allow_empty_password
@@ -45,7 +43,6 @@ IMAGE_INSTALL = "\
  ${CORE_IMAGE_EXTRA_INSTALL}\
  ${RATIONALIST_PKGS}\
  ${CONFIG_PKGS}\
- ${DEVEL_PKGS}\
  run-postinsts\
 "
 
