@@ -1,6 +1,6 @@
 SUMMARY = "A tool to read the serial number and write the hostname"
-LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=8264535c0c4e9c6c335635c4026a8022"
+LICENSE = "GPLv3"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=84dcc94da3adb52b53ae4fa38fe49e5d"
 
 SRCREV = "${AUTOREV}"
 PR = "r3"
