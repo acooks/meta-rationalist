@@ -1,7 +1,7 @@
 SUMMARY = "Config for Rationali.st JitterTrap on PC Engines APU1."
 SECTION = "base"
 LICENSE = "GPLv2"
-RDEPENDS_${PN} = "initscripts"
+RDEPENDS_${PN} = "initscripts apu1-serial-number"
 PR = "r0"
 COMPATIBLE_MACHINE = "mousetrap_hw"
 RPROVIDES_${PN} = "trap-machine-config"
