@@ -37,7 +37,7 @@ CONFIG_PKGS = "trap-machine-config"
 
 # read-only-rootfs breaks ssh config, specifically ssh_allow_empty_password
 #IMAGE_FEATURES += "package-management ssh-server-openssh read-only-rootfs"
-IMAGE_FEATURES += "package-management ssh-server-openssh"
+IMAGE_FEATURES += "package-management ssh-server-openssh post-install-logging"
 
 IMAGE_INSTALL = "\
  packagegroup-core-boot\
@@ -82,6 +82,7 @@ add_custom_smart_config() {
 
 
 ROOTFS_POSTPROCESS_COMMAND =+ "\
+ postinst_enable_logging ;\
  set_root_password ;\
  add_custom_smart_config ;\
  ssh_allow_empty_password ;\
