@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM ??= "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd64
 
 SRCREV = "${AUTOREV}"
 PR = "r1"
-PV = "002+git${SRCPV}"
+PV = "003+git${SRCPV}"
 
 BRANCH = "v1.7-stable"
 SRC_URI = "git://github.com/warmcat/libwebsockets;branch=${BRANCH};"
