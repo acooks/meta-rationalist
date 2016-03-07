@@ -12,6 +12,7 @@ RATIONALIST_PKGS = "\
  jittertrap\
  jittertrap-dbg\
  kernel-modules\
+ less\
  kmod\
  netbase\
  openssh\
