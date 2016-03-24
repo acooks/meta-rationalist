@@ -50,5 +50,5 @@ SRCREV = "c252409a688a831385fb71097db7a86ffe595b74"
 PR = "r2"
 PV = "${LINUX_VERSION}+git${SRCPV}"
 
-COMPATIBLE_MACHINE = "mousetrap_hw"
+COMPATIBLE_MACHINE = "mousetrap_hw|pcengines-apu2"
 
