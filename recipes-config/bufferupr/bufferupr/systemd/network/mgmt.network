@@ -1,0 +1,7 @@
+[Match]
+Name=mgmt
+
+[Network]
+DHCP=yes
+LinkLocalAddressing=true
+LLMNR=true

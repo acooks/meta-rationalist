@@ -1,0 +1,6 @@
+[Match]
+Path=*0000:02:00.0*
+
+[Link]
+Name=mgmt
+MACAddressPolicy=persistent
