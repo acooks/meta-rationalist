@@ -2,8 +2,11 @@ SUMMARY = "A small image just capable of allowing a device to boot."
 
 RATIONALIST_PKGS = "\
  avahi-daemon\
+ dmidecode\
  expat\
+ flashrom\
  htop\
+ i2c-tools\
  initscripts\
  iproute2\
  iproute2-bridge\
