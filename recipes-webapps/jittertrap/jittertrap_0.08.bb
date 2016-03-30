@@ -32,6 +32,7 @@ do_compile() {
    make \
    ALLOWED_IFACES="Port1:Port2" \
    SAMPLE_PERIOD_US=1000 \
+   PRODUCT_BRANDING=BufferUpr \
    CFLAGS_EXTRA="${CFLAGS}"
 }
 
